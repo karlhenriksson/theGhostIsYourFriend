@@ -1,0 +1,27 @@
+
+/* There to hide the help text when it goes under the button */
+#helpMenuHolder {
+  display: flex;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  padding-top: 80px;
+  left: 10%;
+  width: 80%;
+}
+
+#helpMenu {
+  flex: 1;
+  display: none;
+  text-align: center;
+  overflow-y: scroll;
+  
+  /* Hide scrollbar */
+  /* https://stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-being-able-to-scroll */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+#helpMenu::-webkit-scrollbar { 
+  /* Hide scrollbar, see above */
+  display: none;  /* Safari and Chrome */
+}

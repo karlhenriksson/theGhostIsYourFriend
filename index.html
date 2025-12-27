@@ -1,0 +1,102 @@
+<!-- My index file for the end project. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" , href="style.css" />
+    <title>The Ghost is your Friend</title>
+    <!-- https://www.w3schools.com/html/html_favicon.asp -->
+    <link rel="icon" type="image/x-icon" href="Atlases/favicon.ico" />
+  </head>
+  <body style="margin: 0px; overflow: hidden">
+    <!-- The help menu div, which is activated when in the help menu state -->
+    <div id="helpMenuHolder">
+      <div id="helpMenu">
+        <h1>Help:</h1>
+        <h2>How to play</h2>
+        <p>
+          You play as a demon, cooperating with a ghost to destroy the world.
+          The ghost is your friend (and is also invincible), so don't spend
+          valuable time trying to kill it.
+          <b
+            >The ghost is your source of power. You have to stay close to it.</b
+          >
+          If you stray too far from the ghost, your speed and damage will
+          gradually decrease until you have no chance against the infinite
+          onslaught of enemies.
+          <br />
+          <br />
+          In general, any objects you shoot/drop is good and anything your
+          enemies shoot is bad. Except for money, that is.
+          <br />
+          <br />
+          You level up by collecting money bills, which are dropped by certain
+          enemies. When you have collected enough money, you get to choose from
+          4 different powers to level up. Different powers have different
+          playstyles, so try out combinations that fit you well! Over time,
+          you'll find all the different enemy types and abilities. They will not
+          be handed to you in this help section though, you'll have to find and
+          test them yourself.
+          <br />
+          <br />
+          Your goal is to survive as long as possible.
+        </p>
+        <h2>Controls</h2>
+        <p1>
+          Move: WASD <br />
+          Aim: Mouse pointer <br />
+          (Using abilities is automatic) <br />
+        </p1>
+        <h2>Tips</h2>
+        <p>
+          - Stay relatively close to the ghost. Straying a bit won't hurt you
+          much, but going too far away will be a lot more dangerous.<br />
+          - Frozen enemies can't use their abilities.<br />
+          - Freezing enemies tends to keep the emojis from bunching up, which
+          can be both good and bad.<br />
+          - It can be hard to pick up money from enemies sometimes. Double back
+          every now and then, and pick up what you missed last time.<br />
+          - Present pickups give you a little health back.<br />
+        </p>
+        <h1>Credits:</h1>
+        <p>
+          Programming, concept, and design by Karl Henriksson <br />
+          Emoji sprites from
+          <a href="https://openmoji.org/">Openmoji.org</a>, using
+          <a href="https://axelpale.github.io/openmoji-sprites/"
+            >Axelpale's spritesheets</a
+          >
+          (with modifications) <br />
+          Font in background and logo from
+          <a
+            href="https://www.freejapanesefont.com/851-chikara-dzuyoku-download/"
+          >
+            freejapanesefont.com
+          </a>
+          <br />
+          Inspired by
+          <a href="https://magic-survival-rpg.fandom.com/wiki/Magic_Survival"
+            >Magic Survival</a
+          >
+        </p>
+      </div>
+    </div>
+
+    <canvas id="canvas"></canvas>
+    <!-- Holds multiline text -->
+    <div id="textHolder"></div>
+
+    <!-- Load all the help classes. These are kept separate because 
+      they are supposed to be modular. -->
+    <script src="inputClass.js"></script>
+    <script src="graphicsClass.js"></script>
+    <script src="stateManager.js"></script>
+    <!-- Load all the program-specific classes and data scripts -->
+    <script src="enemyData.js"></script>
+    <script src="abilityData.js"></script>
+    <script src="classes.js"></script>
+    <!-- Run the game -->
+    <script src="gameManager.js"></script>
+  </body>
+</html>
